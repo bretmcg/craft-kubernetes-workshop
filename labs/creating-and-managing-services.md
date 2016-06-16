@@ -12,32 +12,43 @@ In this lab you will create the `monolith` service and "expose" the `secure-mono
 Explore the monolith service configuration file:
 
 ```
-cat services/monolith.yaml 
+cat services/monolith.yaml
 ```
 
-Create the monolith service using kubectl:
+Modify the monolith service to expose it externally as a Load Balancer:
+
+```bash
+vim services/monolith.yaml
+```
+
+Change `type: NodePorts` to a load balancer, so it will be exposed publicly:
+```yaml
+type: LoadBalancer
+```
+
+Now create the service using kubectl:
 
 ```
 kubectl create -f services/monolith.yaml
 ```
-
+<!--
 Use the `gcloud compute firewall-rules` command to allow traffic to the `monolith` service:
 
 ```
 gcloud compute firewall-rules create allow-monolith-nodeport \
   --allow=tcp:31000
-```
+``` -->
 
 ## Exercise: Interact with the Monolith Service Remotely
 
 ### Hints
 
 ```
-gcloud compute instances list
+kubectl get services
 ```
 
 ```
-curl -k https://<EXTERNAL_IP>:31000
+curl -k https://<EXTERNAL_IP>
 ```
 
 ### Quiz
@@ -96,11 +107,11 @@ kubectl describe services monolith
 ### Hints
 
 ```
-gcloud compute instances list
+kubectl get services monolith
 ```
 
 ```
-curl -k https://<EXTERNAL_IP>:31000
+curl -k https://<EXTERNAL_IP>
 ```
 
 ## Tutorial: Remove Labels from Pods
