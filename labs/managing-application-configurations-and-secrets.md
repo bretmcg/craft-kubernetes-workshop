@@ -14,9 +14,10 @@ In this lab we will create a new Pod named `secure-monolith` based on the `healt
 
 Before we can use the `nginx` container to serve HTTPS traffic we need some TLS certificates. In this tutorial you will store a set of self-signed TLS certificates in Kubernetes as secrets.
 
-Create the `tls-certs` secret from the TLS certificates stored under the tls directory:
+Create the `tls-certs` secret from the TLS certificates stored under the `tls/` directory:
 
 ```
+ls tls/
 kubectl create secret generic tls-certs --from-file=tls/
 ```
 
@@ -35,9 +36,10 @@ kubectl describe secrets tls-certs
 
 The nginx container also needs a configuration file to setup the secure reverse proxy. In this tutorial you will create a configmap from the `proxy.conf` nginx configuration file.
 
-Create the `nginx-proxy-conf` configmap based on the `proxy.conf` nginx configuration file:
+Look at the contents of the `nginx/proxy.conf` nginx configuration file and then create the `nginx-proxy-conf` configmap based on it:
 
-```
+```bash
+cat nginx/proxy.conf
 kubectl create configmap nginx-proxy-conf --from-file=nginx/proxy.conf
 ```
 
