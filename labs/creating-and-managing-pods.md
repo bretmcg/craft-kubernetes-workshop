@@ -3,7 +3,7 @@
 At the core of Kubernetes is the Pod. Pods represent a logical application and hold a collection of one or more containers and volumes. In this lab you will learn how to:
 
 * Write a Pod configuration file
-* Create and inspect Pods 
+* Create and inspect Pods
 * Interact with Pods remotely using kubectl
 
 In this lab you will create a Pod named `monolith` and interact with it using the kubectl command line tool.
@@ -13,6 +13,7 @@ In this lab you will create a Pod named `monolith` and interact with it using th
 Explore the `monolith` pod configuration file:
 
 ```
+cd ~/kubernetes-workshop/kubernetes
 cat pods/monolith.yaml
 ```
 
@@ -46,7 +47,7 @@ kubectl describe pods <pod-name>
 
 ## Exercise: Interact with a Pod remotely
 
-Pods are allocated a private IP address by default and cannot be reached outside of the cluster. Use the `kubectl port-forward` command to map a local port to a port inside the `monolith` pod. 
+Pods are allocated a private IP address by default and cannot be reached outside of the cluster. Use the `kubectl port-forward` command to map a local port to a port inside the `monolith` pod.
 
 ### Hints
 

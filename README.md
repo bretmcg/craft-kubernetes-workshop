@@ -38,12 +38,13 @@ cd kubernetes-workshop/kubernetes
 
 Kubernetes is all about applications and in this section you will utilize the Kubernetes API to deploy, manage, and upgrade applications. In this part of the workshop you will use an example application called "app" to complete the labs.
 
-  * [Creating and managing pods](labs/creating-and-managing-pods.md)
-  * [Monitoring and health checks](labs/monitoring-and-health-checks.md)
-  * [Managing application configurations and secrets](labs/managing-application-configurations-and-secrets.md)
-  * [Creating and managing services](labs/creating-and-managing-services.md)
-  * [Creating and managing deployments](labs/creating-and-managing-deployments.md)
-  * [Rolling out updates](labs/rolling-out-updates.md)
+  1. [Containerizing your application](labs/containerizing-your-application.md)
+  1. [Creating and managing pods](labs/creating-and-managing-pods.md)
+  1. [Monitoring and health checks](labs/monitoring-and-health-checks.md)
+  1. [Managing application configurations and secrets](labs/managing-application-configurations-and-secrets.md)
+  1. [Creating and managing services](labs/creating-and-managing-services.md)
+  1. [Creating and managing deployments](labs/creating-and-managing-deployments.md)
+  1. [Rolling out updates](labs/rolling-out-updates.md)
 
 ## Lab Docker images
 
