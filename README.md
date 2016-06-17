@@ -9,13 +9,13 @@ Kubernetes Version: 1.2.2
 
 ## Workshop setup
 
-### Google Cloud Platform account setup
+#### Google Cloud Platform account setup
 1. Navigate to https://console.cloud.google.com and login with your credentials.
 1. Select your project from the project listing.
 1. Click the following button to activate [Cloud Shell](https://cloud.google.com/shell/docs),
 which is your "command line in the cloud" and will be used complete the labs. ![Cloud Shell Icon](https://cloud.google.com/shell/docs/images/shell_icon.png)
 
-### Provision Kubernetes using Google Container Engine (GKE)
+#### Provision Kubernetes using Google Container Engine (GKE)
 
 Kubernetes can be configured with many options and add-ons, but can be time consuming to bootstrap from the ground up. In this section you will bootstrap Kubernetes using [Google Container Engine](https://cloud.google.com/container-engine) (GKE).
 
@@ -23,9 +23,9 @@ In your **Cloud Shell** terminal, issue the following commands (feel free to cha
 
 ```
 gcloud config set compute/zone europe-west1-b
-gcloud container clusters create myk8scluster --num-nodes 3
+gcloud container clusters create myk8scluster --num-nodes 7
 ```
-### Clone repository
+#### Clone repository
 
 In your Cloud Shell environment clone the following repository.
 
