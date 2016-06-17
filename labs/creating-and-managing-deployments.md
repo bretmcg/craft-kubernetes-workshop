@@ -1,12 +1,12 @@
 # Creating and Managing Deployments
 
-Deployments abstract away the low level details of managing Pods. Pods are tied to the lifetime of the node they are created on. When the node goes away so does the Pod. ReplicaSets can be used to ensure one or more replicas of a Pods are always running, even when nodes fail.
+[Deployments](http://kubernetes.io/docs/user-guide/deployments/) abstract away the low level details of managing Pods. Pods are tied to the lifetime of the node they are created on. When the node goes away so does the Pod. [ReplicaSets](http://kubernetes.io/docs/user-guide/replicasets/) can be used to ensure one or more replicas of a Pods are always running, even when nodes fail.
 
 Deployments sit on top of ReplicaSets and add the ability to define how updates to Pods should be rolled out.
 
 In this lab we will combine everything we learned about Pods and Services to breakup the monolith application into smaller Services. You will create 3 deployments, one for each service:
 
-* frontend 
+* frontend
 * auth
 * hello
 
