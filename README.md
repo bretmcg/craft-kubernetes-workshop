@@ -12,6 +12,8 @@ Kubernetes Version: 1.2.2
 #### Google Cloud Platform account setup
 1. Navigate to https://console.cloud.google.com and login with your credentials.
 1. Select your project from the project listing.
+1. Navigate (using the menu or the search bar) to [Compute Engine](https://console.cloud.google.com/compute/).
+1. Enable Compute Engine (this may take a few minutes).
 1. Click the following button to activate [Cloud Shell](https://cloud.google.com/shell/docs),
 which is your "command line in the cloud" and will be used complete the labs. ![Cloud Shell Icon](https://cloud.google.com/shell/docs/images/shell_icon.png)
 
