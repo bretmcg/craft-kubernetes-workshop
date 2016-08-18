@@ -43,7 +43,7 @@ docker rm <container-id>
 docker rmi kelseyhightower/monolith:1.0.0
 ```
 
-## Title here
+## Deploy the app in the Kubernetes Cluster
 
 The next hurdle is the infrastructure needed to run manage in production. We'll use Kubernetes (and GKE) to handle that for us.
 
